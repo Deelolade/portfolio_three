@@ -1,73 +1,38 @@
 import React from "react";
-import { PERSONAL_INFO } from "../data/portfolioData";
-import { Terminal, Code, Database, MapPin } from "./Icons";
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 border-b border-zinc-800/60 bg-[#09090b]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Section Header Column */}
-          <div className="lg:col-span-4">
-            <div className="sticky top-28">
-              <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-mono text-emerald-400 bg-zinc-900 border border-zinc-800 rounded-md mb-4">
-                <span>01 // ABOUT</span>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight text-zinc-100 mb-4">
-                Engineering Philosophy & Product Vision
-              </h2>
-              <p className="text-sm font-mono text-zinc-400 leading-relaxed mb-6">
-                Computer Engineering background. Full-stack execution. Lagos based.
-              </p>
-              
-              <div className="p-4 bg-zinc-900/60 border border-zinc-800 rounded-lg space-y-3 font-mono text-xs text-zinc-400">
-                <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-                  <span className="text-zinc-500">Degree</span>
-                  <span className="text-zinc-300 font-medium">B.Sc. Computer Engineering</span>
-                </div>
-                <div className="flex items-center justify-between border-b border-zinc-800/80 pb-2">
-                  <span className="text-zinc-500">Location</span>
-                  <span className="text-zinc-300 font-medium">Lagos, Nigeria (WAT / UTC+1)</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-zinc-500">Primary Language</span>
-                  <span className="text-zinc-300 font-medium">TypeScript / Node.js</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="py-16 sm:py-20 border-b border-zinc-800/80">
+      <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-6 font-sans">
+        About
+      </h2>
 
-          {/* Editorial Paragraphs Column */}
-          <div className="lg:col-span-8 space-y-6 text-zinc-300 leading-relaxed text-base sm:text-lg">
-            {PERSONAL_INFO.aboutParagraphs.map((paragraph, index) => (
-              <p key={index} className="text-zinc-300 leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+      <div className="space-y-4 text-zinc-300 leading-relaxed text-sm sm:text-base max-w-2xl font-sans">
+        <p>
+          I approach software engineering with a focus on simplicity, predictability, and long-term maintainability. Having earned my degree in Computer Engineering, I view applications through both system design principles and practical user requirements. I prefer clean architectures and straightforward code over unnecessary abstractions.
+        </p>
 
-            {/* Quick Principles Grid */}
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 bg-zinc-900/40 border border-zinc-800/80 rounded-lg">
-                <div className="flex items-center gap-2 mb-2 text-emerald-400 font-mono text-xs font-semibold">
-                  <Code size={14} />
-                  <span>PREDICTABLE ARCHITECTURE</span>
-                </div>
-                <p className="text-xs text-zinc-400 leading-normal">
-                  Strict type boundaries, clean data models, and straightforward code paths over clever abstractions.
-                </p>
-              </div>
+        <p>
+          Over the past several years, I have worked across the full JavaScript and TypeScript ecosystem—building React and Next.js frontends, designing Node.js APIs, and structuring relational database schemas in PostgreSQL. I enjoy taking digital products from early concepts through backend architecture to production deployment.
+        </p>
 
-              <div className="p-5 bg-zinc-900/40 border border-zinc-800/80 rounded-lg">
-                <div className="flex items-center gap-2 mb-2 text-emerald-400 font-mono text-xs font-semibold">
-                  <Database size={14} />
-                  <span>END-TO-END OWNERSHIP</span>
-                </div>
-                <p className="text-xs text-zinc-400 leading-normal">
-                  Designing database schemas, crafting server APIs, and building polished UI components seamlessly.
-                </p>
-              </div>
-            </div>
-          </div>
+        <p>
+          Based in Lagos, Nigeria, I work with product teams and client organizations locally and remotely. Outside of writing code and reviewing pull requests, I spend time analyzing classical chess endgames and following modern industrial architecture.
+        </p>
+      </div>
+
+      <div className="mt-8 pt-6 border-t border-zinc-900 font-mono text-xs text-zinc-400 space-y-1 max-w-2xl">
+        <div>
+          <span className="text-zinc-500">Education: </span>
+          <span className="text-zinc-300">B.Sc. Computer Engineering</span>
+        </div>
+        <div>
+          <span className="text-zinc-500">Location: </span>
+          <span className="text-zinc-300">Lagos, Nigeria</span>
+        </div>
+        <div>
+          <span className="text-zinc-500">Primary Stack: </span>
+          <span className="text-zinc-300">React, Next.js, Node.js, TypeScript, PostgreSQL</span>
         </div>
       </div>
     </section>

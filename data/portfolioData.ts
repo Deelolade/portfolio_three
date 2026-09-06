@@ -66,6 +66,7 @@ export interface TechCategory {
 export const PERSONAL_INFO = {
   name: "Habeeb Oluwanishola",
   title: "Full-Stack JavaScript Developer",
+  role: "Full-Stack JavaScript Developer",
   location: "Lagos, Nigeria",
   availability: "Available for freelance projects and opportunities",
   availabilityStatus: true,
