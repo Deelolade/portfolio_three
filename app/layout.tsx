@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: `${pageTitle} · ${PERSONAL_INFO.brand}`,
     description:
       "I build scalable web applications and digital products that turn ideas into reliable experiences.",
-    url: "https://habeeboluwanishola.dev",
+    url: "https://deelolade.com.ng",
     siteName: `${PERSONAL_INFO.brand} — ${PERSONAL_INFO.name}`,
     locale: "en_US",
     type: "website",
