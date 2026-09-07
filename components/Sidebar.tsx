@@ -71,12 +71,12 @@ export const Sidebar: React.FC = () => {
             X ↗
           </a>
           <a
-            href={PERSONAL_INFO.calendlyUrl}
+            href={PERSONAL_INFO.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-emerald-400 transition-colors pt-2 border-t border-zinc-900"
           >
-            Book a Call ↗
+            WhatsApp ↗
           </a>
         </div>
       </div>

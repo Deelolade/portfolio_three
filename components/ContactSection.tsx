@@ -43,6 +43,18 @@ export const ContactSection: React.FC = () => {
           </a>
         </div>
 
+        <div>
+          <span className="text-zinc-500 block">WhatsApp:</span>
+          <a
+            href={PERSONAL_INFO.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-400 hover:underline text-sm font-medium"
+          >
+            {PERSONAL_INFO.phone} ↗
+          </a>
+        </div>
+
         <div className="flex flex-wrap gap-4 text-xs pt-1">
           <a
             href={PERSONAL_INFO.github}
@@ -66,15 +78,7 @@ export const ContactSection: React.FC = () => {
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-emerald-400 transition-colors"
           >
-            X / Twitter ↗
-          </a>
-          <a
-            href={PERSONAL_INFO.calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-emerald-400 transition-colors"
-          >
-            Book a Call ↗
+            X  ↗
           </a>
         </div>
       </div>
