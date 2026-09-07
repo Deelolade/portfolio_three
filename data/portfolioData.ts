@@ -213,6 +213,13 @@ export const TECH_CATEGORIES: TechCategory[] = [
       { name: "Cloudinary", note: "Media management" },
     ],
   },
+  {
+    title: "Currently Exploring",
+    description: "Expanding technical skills and tooling.",
+    skills: [
+      { name: "Python", note: "Backend & scripting" },
+    ],
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
