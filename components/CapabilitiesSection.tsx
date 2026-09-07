@@ -1,28 +1,7 @@
 import React from "react";
+import { CAPABILITIES } from "../data/portfolioData";
 
 export const CapabilitiesSection: React.FC = () => {
-  const capabilities = [
-    {
-      title: "Full-Stack Development",
-      description:
-        "Building complete web applications from database schemas to client user interfaces.",
-    },
-    {
-      title: "Frontend Engineering",
-      description:
-        "Developing responsive, accessible, and fast web interfaces using React, Next.js, and TypeScript.",
-    },
-    {
-      title: "Backend & API Development",
-      description:
-        "Designing RESTful APIs, Node.js services, database architectures, and authentication flows.",
-    },
-    {
-      title: "Product Development",
-      description:
-        "Transforming requirements and ideas into production-ready software systems.",
-    },
-  ];
 
   return (
     <section className="py-16 sm:py-20 border-b border-zinc-800/80">
@@ -31,7 +10,7 @@ export const CapabilitiesSection: React.FC = () => {
       </h2>
 
       <div className="space-y-4 max-w-2xl font-sans">
-        {capabilities.map((cap) => (
+        {CAPABILITIES.map((cap) => (
           <div key={cap.title} className="text-sm">
             <strong className="text-zinc-200 font-semibold">{cap.title}</strong>
             <span className="text-zinc-400"> — {cap.description}</span>

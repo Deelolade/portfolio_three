@@ -5,9 +5,7 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { CapabilitiesSection } from "../components/CapabilitiesSection";
 import { TechStackSection } from "../components/TechStackSection";
 import { TestimonialsSection } from "../components/TestimonialsSection";
-import { WritingSection } from "../components/WritingSection";
 import { ContactSection } from "../components/ContactSection";
-import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (
@@ -27,9 +25,7 @@ export default function Home() {
             <CapabilitiesSection />
             <TechStackSection />
             <TestimonialsSection />
-            {/*<WritingSection />*/}
             <ContactSection />
-            <Footer />
           </div>
         </div>
       </div>

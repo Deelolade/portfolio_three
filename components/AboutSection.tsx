@@ -3,10 +3,6 @@ import React from "react";
 export const AboutSection: React.FC = () => {
   return (
     <section className="py-16 sm:py-20 border-b border-zinc-800/80">
-      {/*<h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-6 font-sans">
-        About
-      </h2>*/}
-
       <div className="space-y-4 text-zinc-300 leading-relaxed text-sm sm:text-base max-w-2xl font-sans">
         <p>
           Good products need more than just working code. They need thoughtful
