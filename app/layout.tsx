@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { PERSONAL_INFO } from "../data/portfolioData";
 
-const pageTitle = `${PERSONAL_INFO.name} — ${PERSONAL_INFO.title}`;
+const pageTitle = `${PERSONAL_INFO.brand} — ${PERSONAL_INFO.title}`;
 const twitterHandle = `@${
   PERSONAL_INFO.twitter.split("/").filter(Boolean).pop() ?? "deelolade"
 }`;
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: PERSONAL_INFO.name }],
   creator: PERSONAL_INFO.brand,
+  icons: {
+    icon: "/DEE-logo.jpg",
+    apple: "/DEE-logo.jpg",
+  },
   openGraph: {
     title: `${pageTitle} · ${PERSONAL_INFO.brand}`,
     description:
