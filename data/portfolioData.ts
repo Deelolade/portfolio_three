@@ -51,6 +51,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/deelolade",
   linkedin: "https://linkedin.com/in/deelolade",
   twitter: "https://x.com/deelolade",
+  website: "https://deelolade.com.ng",
 };
 
 export const PROJECTS: Project[] = [
