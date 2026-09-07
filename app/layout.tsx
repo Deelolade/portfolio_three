@@ -1,8 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { PERSONAL_INFO } from "../data/portfolioData";
 
 const SITE_URL = PERSONAL_INFO.website;
+// Set NEXT_PUBLIC_GA_MEASUREMENT_ID in .env.local to enable Google Analytics.
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const pageTitle = `${PERSONAL_INFO.brand} — ${PERSONAL_INFO.title}`;
 const socialTitle = `${PERSONAL_INFO.name} — ${PERSONAL_INFO.title} | ${PERSONAL_INFO.brand}`;
@@ -116,6 +119,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth h-full antialiased">
       <body className="min-h-full flex flex-col bg-[#09090b] text-zinc-100 selection:bg-zinc-800 selection:text-emerald-400 font-sans">
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="ga4-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","${GA_MEASUREMENT_ID}",{anonymize_ip:true});`,
+              }}
+            />
+          </>
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

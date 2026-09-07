@@ -22,8 +22,8 @@ export const AboutSection: React.FC = () => {
         <p>
           Based in Lagos, Nigeria, I work with clients and teams locally and remotely.
           I enjoy solving real problems, learning from every project, and finding
-          simpler ways to build useful software—currently exploring Python to expand my engineering toolkit. Outside of coding, you'll probably
-          find me watching a series, playing games with friends, or trying new food.
+          simpler ways to build useful software, currently exploring Python to expand my engineering toolkit. Outside of coding, you'll probably
+          find me watching anime, playing games with friends, or trying new food.
         </p>
       </div>
 
