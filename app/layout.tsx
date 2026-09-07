@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PERSONAL_INFO } from "../data/portfolioData";
+
+const pageTitle = `${PERSONAL_INFO.name} — ${PERSONAL_INFO.title}`;
+const twitterHandle = `@${
+  PERSONAL_INFO.twitter.split("/").filter(Boolean).pop() ?? "deelolade"
+}`;
 
 export const metadata: Metadata = {
-  title: "Habeeb Oluwanishola — Full-Stack JavaScript Developer",
-  description:
-    "Personal portfolio of Habeeb Oluwanishola, a Full-Stack JavaScript & TypeScript Developer based in Lagos, Nigeria specializing in building scalable web applications with React, Next.js, Node.js, and PostgreSQL.",
+  title: pageTitle,
+  description: `Personal portfolio of ${PERSONAL_INFO.name} (${PERSONAL_INFO.brand}), a Full-Stack Engineer based in Lagos, Nigeria, building reliable web applications and backend systems.`,
   keywords: [
-    "Habeeb Oluwanishola",
+    "Deelolade",
+    PERSONAL_INFO.name,
     "Full-Stack Developer",
     "JavaScript Developer",
     "TypeScript Developer",
@@ -16,23 +22,23 @@ export const metadata: Metadata = {
     "Lagos Nigeria Developer",
     "Software Engineer",
   ],
-  authors: [{ name: "Habeeb Oluwanishola" }],
-  creator: "Habeeb Oluwanishola",
+  authors: [{ name: PERSONAL_INFO.name }],
+  creator: PERSONAL_INFO.brand,
   openGraph: {
-    title: "Habeeb Oluwanishola — Full-Stack JavaScript Developer",
+    title: `${pageTitle} · ${PERSONAL_INFO.brand}`,
     description:
       "I build scalable web applications and digital products that turn ideas into reliable experiences.",
     url: "https://habeeboluwanishola.dev",
-    siteName: "Habeeb Oluwanishola Portfolio",
+    siteName: `${PERSONAL_INFO.brand} — ${PERSONAL_INFO.name}`,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Habeeb Oluwanishola — Full-Stack JavaScript Developer",
+    title: `${pageTitle} · ${PERSONAL_INFO.brand}`,
     description:
       "I build scalable web applications and digital products that turn ideas into reliable experiences.",
-    creator: "@habeeb_dev",
+    creator: twitterHandle,
   },
 };
 

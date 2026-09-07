@@ -5,7 +5,7 @@ export const ProjectsSection: React.FC = () => {
   return (
     <section className="py-16 sm:py-20 border-b border-zinc-800/80">
       <h2 className="text-2xl font-bold tracking-tight text-zinc-100 mb-6 font-sans">
-        Selected Projects
+        Selected Works
       </h2>
 
       <div className="divide-y divide-zinc-800/80 max-w-2xl">

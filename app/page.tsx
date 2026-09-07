@@ -27,7 +27,7 @@ export default function Home() {
             <CapabilitiesSection />
             <TechStackSection />
             <TestimonialsSection />
-            <WritingSection />
+            {/*<WritingSection />*/}
             <ContactSection />
             <Footer />
           </div>

@@ -5,8 +5,11 @@ export const Sidebar: React.FC = () => {
   return (
     <aside className="lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-between py-10 lg:py-16 pr-0 lg:pr-12 lg:border-r lg:border-zinc-800/80 font-sans">
       <div className="space-y-6">
-        {/* Name & Role */}
+        {/* Brand & Name & Role */}
         <div>
+          <p className="font-mono text-xs text-emerald-400 uppercase tracking-widest mb-2">
+            {PERSONAL_INFO.brand}
+          </p>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-100 mb-1">
             {PERSONAL_INFO.name}
           </h1>
@@ -65,7 +68,7 @@ export const Sidebar: React.FC = () => {
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-emerald-400 transition-colors"
           >
-            X / Twitter ↗
+            X ↗
           </a>
           <a
             href={PERSONAL_INFO.calendlyUrl}

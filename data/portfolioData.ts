@@ -64,17 +64,20 @@ export interface TechCategory {
 }
 
 export const PERSONAL_INFO = {
+  // Brand / public wordmark (site chrome, footer, metadata)
+  brand: "Deelolade",
+  // Professional name of the person behind the brand
   name: "Habeeb Oluwanishola",
-  title: "Full-Stack JavaScript Developer",
-  role: "Full-Stack JavaScript Developer",
+  title: "Full-Stack Engineer",
+  role: "Full-Stack Engineer",
   location: "Lagos, Nigeria",
   availability: "Available for freelance projects and opportunities",
   availabilityStatus: true,
-  email: "habeeb.oluwanishola.dev@gmail.com",
+  email: "habeeboluwanishola13@gmail.com",
   calendlyUrl: "https://calendly.com/habeeb-dev/30min",
-  github: "https://github.com/habeeb-oluwanishola",
-  linkedin: "https://linkedin.com/in/habeeb-oluwanishola",
-  twitter: "https://x.com/habeeb_dev",
+  github: "https://github.com/deelolade",
+  linkedin: "https://linkedin.com/in/deelolade",
+  twitter: "https://x.com/deelolade",
   heroHeadline:
     "I build scalable web applications and digital products that turn ideas into reliable experiences.",
   heroSupportingText:
@@ -88,180 +91,153 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "payflow-engine",
-    title: "Payflow Engine",
-    category: "Fintech & Payments Infrastructure",
-    badge: "Full-Stack SaaS",
-    tagline: "Automated multi-currency subscription and invoice platform for African merchants.",
+    id: "harbor",
+    title: "Harbor",
+    category: "Project Management & Collaboration",
+    badge: "Full-Stack Web Application",
+
+    tagline:
+      "A collaborative workspace where teams plan, track, and ship work together.",
+
     problem:
-      "Cross-border subscription billing in Emerging Markets suffers from frequent gateway outages, failed recurring retries, and high friction in reconciliation.",
+      "Teams need a central place to organize projects, manage tasks, and stay aware of activity across their workspace without relying on disconnected tools.",
+
     solution:
-      "Engineered an automated recurring billing engine with intelligent gateway fallbacks, automated retry queues, webhook idempotency handlers, and customer self-serve billing portals.",
+      "Built a full-stack project management platform with kanban boards, drag-and-drop task management, workspace collaboration, OAuth authentication, and real-time activity updates.",
+
     outcome:
-      "Reduced monthly subscription drop-offs by 24% and processed over $1.4M in cross-border settlements with 99.98% transaction reliability.",
-    impactMetric: "$1.4M+ Processed · 99.98% Gateway Uptime",
+      "Created a centralized workspace that brings project planning, task management, and team activity into one collaborative environment.",
+
+    impactMetric:
+      "Plan · Track · Collaborate",
+
     description:
-      "A complete billing platform enabling businesses to accept recurring payments in NGN, USD, and KES with automated ledger reconciliation and multi-tenant webhook dispatches.",
-    technologies: [
-      "Next.js 15",
-      "TypeScript",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma",
-      "Tailwind CSS",
-      "Redis",
-      "Paystack API",
-    ],
-    liveUrl: "https://payflow-engine-demo.vercel.app",
-    githubUrl: "https://github.com/habeeb-oluwanishola/payflow-engine",
-    featured: true,
-    architectureHighlights: [
-      "Idempotent webhook pipeline processing 500+ events/sec",
-      "Prisma relational schema with multi-tenant row-level isolation",
-      "Automated exponential backoff retries for failed card charges",
-      "Optimized Next.js App Router dashboard with server-side table pagination",
-    ],
-    mockupBg: "from-zinc-900 via-emerald-950/30 to-zinc-950",
-  },
-  {
-    id: "pulse-apm",
-    title: "Pulse Real-Time Observability",
-    category: "Developer Tools & APM",
-    badge: "Backend & Systems",
-    tagline: "Lightweight APM & log analytics agent for Node.js microservices.",
-    problem:
-      "Engineering teams faced steep pricing and high resource overhead when deploying enterprise APM suites to inspect lightweight Node microservices.",
-    solution:
-      "Designed a zero-dependency telemetry agent and streaming WebSockets dashboard that aggregates HTTP latency metrics, memory allocation spikes, and error stack traces in real time.",
-    outcome:
-      "Decreased average mean-time-to-detection (MTTD) for production API errors from 45 minutes to under 3 minutes across 14 internal microservices.",
-    impactMetric: "<3min Incident MTTD · Sub-5ms Agent Overhead",
-    description:
-      "A developer tool consisting of an npm telemetry package and a Next.js dashboard featuring live metrics visualization via WebSockets and time-series aggregation.",
+      "Harbor is a project management workspace that helps teams organize projects, manage tasks through kanban boards, and stay up to date with real-time workspace activity.",
+
     technologies: [
       "React",
-      "Node.js",
+      "Vite",
       "TypeScript",
       "Fastify",
-      "Socket.IO",
-      "TimescaleDB",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://pulse-observability.vercel.app",
-    githubUrl: "https://github.com/habeeb-oluwanishola/pulse-apm",
-    featured: true,
-    architectureHighlights: [
-      "Asynchronous ring-buffer metric collection preventing event-loop blockages",
-      "Real-time WebSocket streaming with binary protocol compression",
-      "TimescaleDB hypertable partitioning for efficient time-series range queries",
-      "Dark-mode canvas charting engine optimized for 60fps renders",
-    ],
-    mockupBg: "from-zinc-900 via-indigo-950/30 to-zinc-950",
-  },
-  {
-    id: "commercescale",
-    title: "CommerceScale Headless",
-    category: "E-Commerce Architecture",
-    badge: "Full-Stack Platform",
-    tagline: "High-performance multi-vendor marketplace engine for digital products.",
-    problem:
-      "Legacy e-commerce templates suffered from slow initial page loads (>3.8s) and high cart abandonment during peak promotional drops.",
-    solution:
-      "Architected a headless e-commerce store with incremental static regeneration (ISR), serverless cart state synchronization, and Neon serverless PostgreSQL.",
-    outcome:
-      "Achieved a 99/100 Google Lighthouse performance rating and cut mobile checkout drop-off by 38%.",
-    impactMetric: "99/100 Lighthouse · Sub-1.1s Page Load",
-    description:
-      "An end-to-end commerce experience with instant search filters, vendor dashboard payout tracking, inventory reservation, and secure digital asset download distribution.",
-    technologies: [
-      "Next.js 15",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Neon PostgreSQL",
-      "Supabase Auth",
-      "Cloudinary",
-    ],
-    liveUrl: "https://commercescale.vercel.app",
-    githubUrl: "https://github.com/habeeb-oluwanishola/commercescale",
-    featured: true,
-    architectureHighlights: [
-      "Edge-cached Next.js App Router pages with 60-second ISR revalidation",
-      "Atomic cart mutations using optimistic state updates",
-      "Supabase Row-Level Security (RLS) protecting vendor financial records",
-      "Cloudinary image transformation pipeline with WebP auto-conversion",
-    ],
-    mockupBg: "from-zinc-900 via-amber-950/20 to-zinc-950",
-  },
-  {
-    id: "slate-editor",
-    title: "Slate Collaborative API Studio",
-    category: "Productivity & Developer Tools",
-    badge: "Real-Time Web Application",
-    tagline: "Browser-based OpenAPI schema architect & team documentation suite.",
-    problem:
-      "API documentation frequently fell out of sync with backend code bases, resulting in miscommunicated payload schemas between frontend and backend engineers.",
-    solution:
-      "Built a collaborative, real-time OpenAPI schema editor with live visual previewers, interactive endpoint test runners, and instant TypeScript interface generator.",
-    outcome:
-      "Adopted by 8 active engineering teams, eliminating hand-written API documentation overhead.",
-    impactMetric: "8 Teams Active · 100% Schema Auto-Sync",
-    description:
-      "A developer tool for creating, validating, and sharing REST and GraphQL API specs with real-time multiplayer cursor synchronization.",
-    technologies: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "Node.js",
-      "Express",
-      "Socket.IO",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://slate-api-studio.vercel.app",
-    githubUrl: "https://github.com/habeeb-oluwanishola/slate-api-studio",
-    featured: true,
-    architectureHighlights: [
-      "Operational Transformation (OT) state engine for concurrent editing",
-      "Client-side AST schema parser for instant OpenAPI 3.1 validation",
-      "Custom TypeScript type exporter converting JSON schemas to interfaces",
-    ],
-    mockupBg: "from-zinc-900 via-teal-950/20 to-zinc-950",
-  },
-  {
-    id: "healthbridge-sync",
-    title: "HealthBridge Clinical Portal",
-    category: "Healthcare & Digital Health",
-    badge: "Full-Stack Web App",
-    tagline: "HIPAA-compliant patient triage and asynchronous clinical sync portal.",
-    problem:
-      "Specialist clinics struggled with paper-heavy intake forms, disorganized medical record transfers, and delayed triage scheduling.",
-    solution:
-      "Engineered an encrypted patient portal featuring dynamic symptom intake questionnaires, automated urgency scoring, and automated appointment scheduling.",
-    outcome:
-      "Shortened patient check-in wait times by 62% and eliminated manual intake entry errors for partner clinics.",
-    impactMetric: "62% Faster Check-in · Zero Record Errors",
-    description:
-      "An accessible telehealth and triage web application enabling seamless communication between clinical staff and patients with file encryption at rest.",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
       "PostgreSQL",
+      "Neon",
       "Prisma",
-      "Cloudflare Workers",
+      "Better Auth",
+      "Ably",
+      "Resend",
+      "dnd-kit",
     ],
-    liveUrl: "https://healthbridge-sync.vercel.app",
-    githubUrl: "https://github.com/habeeb-oluwanishola/healthbridge-sync",
-    featured: false,
+
+    liveUrl: "https://harbor.deelolade.com.ng",
+    githubUrl: "",
+
+    featured: true,
+
     architectureHighlights: [
-      "End-to-end payload encryption for patient diagnostic uploads",
-      "Server-side form state management with strict Zod validation schemas",
-      "Automated clinic staff email notification dispatches via Cloudflare Workers",
+      "Drag-and-drop task management built with dnd-kit and sortable workflows.",
+      "Dedicated task movement endpoint for handling board and column updates.",
+      "OAuth authentication with Better Auth, including Google and GitHub sign-in.",
+      "PostgreSQL database hosted on Neon and managed with Prisma ORM.",
+      "Real-time activity pub/sub powered by Ably.",
+      "Server-Sent Events proxy for delivering activity updates to the browser.",
+      "Frontend activity subscriptions managed through a reusable useActivityStream hook.",
     ],
+
     mockupBg: "from-zinc-900 via-blue-950/20 to-zinc-950",
   },
+  {
+    id: "exam-prep",
+    title: "ExamPrep",
+    category: "Education Technology",
+    badge: "AI-Powered Learning Platform",
+
+    tagline:
+      "An AI-powered exam preparation platform that creates personalized practice questions based on a student's chosen exam and subjects.",
+
+    problem:
+      "Students preparing for different examinations often struggle to find relevant practice questions tailored to their specific exam and selected subjects.",
+
+    solution:
+      "Built a full-stack exam preparation platform that uses AI to generate practice questions based on the examination and subjects selected by each user.",
+
+    outcome:
+      "Created a personalized practice experience that allows students to generate relevant questions based on their individual exam preparation needs.",
+
+    impactMetric:
+      "Select · Generate · Practice",
+
+    description:
+      "ExamPrep helps students prepare for examinations by generating AI-powered practice questions tailored to their selected exam and subjects.",
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Supabase Auth",
+      "AI",
+    ],
+
+    liveUrl: "https://exam-prep-sigma-nine.vercel.app",
+    githubUrl: "",
+
+    featured: true,
+
+    architectureHighlights: [
+      "Dynamic question generation based on the user's selected examination.",
+      "Subject-based question generation for personalized exam preparation.",
+      "Full-stack architecture built with Next.js and Supabase.",
+      "AI integration for generating relevant practice questions.",
+      "Database-backed user and exam preparation workflows using Supabase.",
+    ],
+
+    mockupBg: "from-zinc-900 via-violet-950/20 to-zinc-950",
+  },
+  {
+    id: "luketech-pdc",
+    title: "Luketech Plumbing & Drilling",
+    category: "Client Work",
+    badge: "Production Business Website",
+
+    tagline:
+      "A production website for a borehole drilling and water infrastructure company, built to showcase its services, projects, and expertise.",
+
+    problem:
+      "Luketech needed a modern online presence that clearly communicates its borehole drilling and water infrastructure services while allowing the company to manage and update website content independently.",
+
+    solution:
+      "Designed and developed a responsive, content-driven website with Next.js and Tailwind CSS, integrating Sanity CMS so the client can update selected website content without requiring developer assistance.",
+
+    outcome:
+      "Delivered a modern production website that provides Luketech with a professional online presence and greater control over managing its website content.",
+
+    impactMetric:
+      "Client Work · CMS-Powered",
+
+    description:
+      "An official production website for Luketech Plumbing and Drilling Company, showcasing its borehole drilling, geophysical survey, pump installation, and water infrastructure services.",
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Sanity CMS",
+    ],
+
+    liveUrl: "https://www.luketechpdc.com/",
+    githubUrl: "",
+
+    featured: true,
+
+    architectureHighlights: [
+      "Built with Next.js for a fast, responsive production web experience.",
+      "Integrated Sanity CMS to allow the client to manage and update selected website content.",
+      "Structured content management to separate editable business content from the application codebase.",
+      "Responsive interface designed to clearly communicate services, projects, and company information.",
+    ],
+
+    mockupBg: "from-zinc-900 via-cyan-950/20 to-zinc-950",
+  }
 ];
 
 export const CAPABILITIES: Capability[] = [
@@ -269,48 +245,48 @@ export const CAPABILITIES: Capability[] = [
     id: "fullstack",
     title: "Full-Stack Development",
     description:
-      "Building complete web applications from frontend user interfaces to backend services, RESTful APIs, relational databases, authentication flows, and automated cloud deployments.",
+      "Building complete web applications across the frontend and backend—from user interfaces and APIs to databases, authentication, and deployment.",
     iconName: "layers",
     highlights: [
-      "End-to-end TypeScript type safety across client and server",
-      "Relational schema modeling and migration strategies in PostgreSQL",
-      "Scalable deployment strategies on Vercel, Render, and Cloudflare",
+      "TypeScript across frontend and backend applications",
+      "PostgreSQL database design and schema management",
+      "Deployment with Vercel, Render, and Cloudflare",
     ],
   },
   {
     id: "frontend",
     title: "Frontend Engineering",
     description:
-      "Creating responsive, accessible, and high-performance user experiences using React and Next.js App Router with an unyielding emphasis on speed, clean typography, and Lighthouse metrics.",
+      "Building responsive and accessible user interfaces with React and Next.js, with a focus on performance, usability, and clean implementation.",
     iconName: "code",
     highlights: [
-      "Next.js App Router architecture, SSR, SSG, and ISR patterns",
-      "Design system development with Tailwind CSS & component modularity",
-      "Web vital optimization, WCAG compliance, and mobile-first layouts",
+      "Next.js App Router, SSR, SSG, and ISR",
+      "Reusable interfaces with Tailwind CSS",
+      "Performance optimization and mobile-first development",
     ],
   },
   {
     id: "backend",
     title: "Backend & API Development",
     description:
-      "Designing reliable backend microservices, REST APIs, authentication security, real-time WebSocket infrastructure, and high-concurrency database queries.",
+      "Designing backend services and APIs that handle application logic, authentication, databases, and real-time functionality.",
     iconName: "database",
     highlights: [
-      "Node.js, Express, and Fastify server architectures",
-      "JWT, session, OAuth, and Supabase security integration",
-      "Prisma & SQL query optimization for heavy transactional workloads",
+      "Node.js, Express, and Fastify applications",
+      "Authentication with sessions, OAuth, and Supabase",
+      "PostgreSQL, Prisma, and API development",
     ],
   },
   {
     id: "product",
     title: "Product Development",
     description:
-      "Helping startups and founders transform ambiguous ideas into crisp, production-ready digital products built for customer validation and long-term maintainability.",
+      "Helping turn ideas into functional digital products by building practical solutions that can grow and evolve over time.",
     iconName: "terminal",
     highlights: [
-      "Rapid prototyping with scalable production architecture",
-      "Outcome-focused feature prioritization and tech debt management",
-      "Clean documentation and maintainable codebase handoffs",
+      "From early ideas and prototypes to production applications",
+      "Feature planning and practical technical decisions",
+      "Clean, maintainable codebases and documentation",
     ],
   },
 ];
@@ -318,72 +294,52 @@ export const CAPABILITIES: Capability[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "exp-1",
-    company: "DevScale Technologies",
-    companyInitials: "DS",
-    role: "Senior Full-Stack Software Engineer",
-    location: "Lagos, Nigeria (Remote)",
-    period: "2024 — Present",
+    company: "Khrien Creation",
+    companyInitials: "KC",
+    role: "Full-Stack Developer",
+    location: "Lagos, Nigeria",
+    period: "Jan 2026 — Present",
     current: true,
     achievements: [
-      "Led the backend and client architecture of a multi-tenant SaaS application serving over 45,000 active monthly users across West Africa.",
-      "Re-engineered core API endpoints with Node.js and PostgreSQL connection pooling, reducing p99 response latencies from 420ms down to 85ms.",
-      "Migrated legacy React frontend codebase to Next.js 15 App Router, improving overall Google Lighthouse Performance scores from 64 to 98.",
-      "Mentored 4 junior and mid-level engineers through code reviews, architectural documentation, and weekly engineering brownbag sessions.",
+      "Architected and shipped production web applications serving as core company products.",
+      "Built Quest, a Next.js and TypeScript platform for task management, document handling, and client reporting, backed by PostgreSQL and deployed on Vercel.",
+      "Engineered the company's marketing website using Next.js and Tailwind CSS, with a focus on performance, responsive design, and strong Lighthouse scores.",
+      "Developed Khrien Academy, a student registration and course-discovery platform that onboarded 700+ prospective students.",
     ],
     technologies: [
-      "Next.js 15",
+      "Next.js",
       "React",
       "TypeScript",
-      "Node.js",
       "PostgreSQL",
-      "Prisma",
       "Tailwind CSS",
+      "shadcn/ui",
       "Vercel",
+      "Resend",
     ],
   },
   {
     id: "exp-2",
-    company: "Apex Product Studio",
-    companyInitials: "AP",
-    role: "Full-Stack JavaScript Developer",
+    company: "Tinzwave",
+    companyInitials: "TW",
+    role: "Full-Stack Developer & Technical Trainer",
     location: "Lagos, Nigeria",
-    period: "2022 — 2024",
+    period: "Jan 2025 — Jul 2026",
+    current: false,
     achievements: [
-      "Delivered 6 client products from greenfield concept to production launch using React, Node.js, Express, and PostgreSQL.",
-      "Built real-time web socket channels for a logistics tracking dashboard handling over 12,000 daily active delivery updates.",
-      "Integrated secure Paystack and Stripe payment gateways with idempotent webhook handlers, handling over $800k in monthly transactions.",
-      "Established standardized CI/CD deployment pipelines on Vercel and Cloudflare, reducing deployment release times by 50%.",
+      "Co-built NairaGame, a gaming news, events, and marketplace platform across independent client, admin dashboard, and Node.js API codebases.",
+      "Built a standalone admin dashboard for game management, user oversight, and reporting.",
+      "Worked across frontend and backend development using React, Node.js, Express, and modern JavaScript tooling.",
+      "Trained and mentored 8 junior developers and interns, teaching JavaScript, React, and Node.js fundamentals while conducting code reviews.",
     ],
     technologies: [
       "React",
+      "Next.js",
+      "JavaScript",
       "TypeScript",
       "Node.js",
       "Express",
-      "Socket.IO",
-      "PostgreSQL",
-      "Tailwind CSS",
-      "Paystack API",
-    ],
-  },
-  {
-    id: "exp-3",
-    company: "Kora Web Solutions",
-    companyInitials: "KW",
-    role: "Frontend Developer",
-    location: "Lagos, Nigeria",
-    period: "2020 — 2022",
-    achievements: [
-      "Developed high-converting, responsive web applications for financial service and e-commerce clients across Nigeria.",
-      "Built reusable React component libraries styled with Tailwind CSS, reducing front-end development cycle times by 35%.",
-      "Optimized web asset bundles and image rendering strategies, lowering average page load size by 1.8MB per route.",
-    ],
-    technologies: [
-      "React",
-      "JavaScript (ES6+)",
-      "Redux Toolkit",
-      "Tailwind CSS",
-      "HTML5/CSS3",
       "REST APIs",
+      "Tailwind CSS",
     ],
   },
 ];
@@ -391,37 +347,41 @@ export const EXPERIENCES: ExperienceItem[] = [
 export const TECH_CATEGORIES: TechCategory[] = [
   {
     title: "Frontend",
-    description: "Building responsive, modern, and accessible client interfaces.",
+    description:
+      "Building responsive, accessible, and high-performance web interfaces.",
     skills: [
-      { name: "React", note: "Primary library" },
-      { name: "Next.js", note: "App Router & SSR" },
-      { name: "TypeScript", note: "Strict type safety" },
-      { name: "Tailwind CSS", note: "Editorial layout styling" },
-      { name: "Redux Toolkit", note: "Complex client state" },
+      { name: "React", note: "UI development" },
+      { name: "Next.js", note: "App Router & full-stack React" },
+      { name: "TypeScript", note: "Type-safe applications" },
+      { name: "Tailwind CSS", note: "Responsive UI development" },
+      { name: "Redux Toolkit", note: "Client state management" },
     ],
   },
   {
     title: "Backend",
-    description: "Engineering secure, scalable APIs and microservice architecture.",
+    description:
+      "Building APIs, application logic, authentication, and real-time functionality.",
     skills: [
-      { name: "Node.js", note: "Server runtime" },
-      { name: "Fastify", note: "High throughput APIs" },
-      { name: "Express", note: "REST endpoints" },
-      { name: "REST APIs", note: "OpenAPI design" },
-      { name: "Socket.IO", note: "Real-time WebSockets" },
+      { name: "Node.js", note: "Server-side development" },
+      { name: "Fastify", note: "Backend APIs" },
+      { name: "Express", note: "REST APIs" },
+      { name: "Socket.IO", note: "Real-time communication" },
+      { name: "Better Auth", note: "Authentication & OAuth" },
     ],
   },
   {
-    title: "Database & Infrastructure",
-    description: "Modeling data, managing persistent stores, and cloud hosting.",
+    title: "Data & Infrastructure",
+    description:
+      "Working with databases, cloud services, content management, and deployment.",
     skills: [
-      { name: "PostgreSQL", note: "Relational database" },
-      { name: "Prisma", note: "ORM & type generation" },
-      { name: "Supabase", note: "Auth & Realtime DB" },
-      { name: "Neon", note: "Serverless Postgres" },
-      { name: "Cloudinary", note: "Media CDN" },
-      { name: "Vercel", note: "Edge hosting & CI/CD" },
-      { name: "Cloudflare", note: "DNS & Workers" },
+      { name: "PostgreSQL", note: "Relational databases" },
+      { name: "Prisma", note: "ORM & database access" },
+      { name: "Supabase", note: "Backend & authentication" },
+      { name: "Neon", note: "Serverless PostgreSQL" },
+      { name: "Vercel", note: "Deployment" },
+      { name: "Cloudflare", note: "Infrastructure & services" },
+      { name: "Sanity", note: "Content management" },
+      { name: "Cloudinary", note: "Media management" },
     ],
   },
 ];
@@ -456,6 +416,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
+// i dont have articles yet 
 export const ARTICLES: Article[] = [
   {
     id: "art-1",

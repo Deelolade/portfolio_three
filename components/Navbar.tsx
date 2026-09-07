@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
             href="#"
             className="font-medium text-zinc-100 hover:text-emerald-400 transition-colors"
           >
-            {PERSONAL_INFO.name}
+            {PERSONAL_INFO.brand}
           </a>
 
           {/* Desktop Nav */}

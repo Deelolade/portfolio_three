@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="py-8 bg-[#09090b] text-zinc-500 font-mono text-xs border-t border-zinc-800/80">
       <div className="max-w-2xl font-mono text-xs text-zinc-500">
-        © {currentYear} {PERSONAL_INFO.name} — {PERSONAL_INFO.title} —{" "}
+        © {currentYear} {PERSONAL_INFO.brand} · {PERSONAL_INFO.name} — {PERSONAL_INFO.title} —{" "}
         <a
           href={PERSONAL_INFO.github}
           target="_blank"
