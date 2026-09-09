@@ -140,7 +140,7 @@ export const EXPERIENCES: ExperienceItem[] = [
       "Architected and shipped production web applications serving as core company products.",
       "Built Quest, a Next.js and TypeScript platform for task management, document handling, and client reporting, backed by PostgreSQL and deployed on Vercel.",
       "Engineered the company's marketing website using Next.js and Tailwind CSS, with a focus on performance, responsive design, and strong Lighthouse scores.",
-      "Developed Khrien Academy, a student registration and course-discovery platform that onboarded 700+ prospective students.",
+      "Helped build and ship Khrien Academy, a student registration and course-discovery platform that onboarded 700+ prospective students."
     ],
     technologies: [
       "Next.js",

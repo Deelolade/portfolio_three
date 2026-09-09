@@ -31,14 +31,14 @@ export const Sidebar: React.FC = () => {
 
         {/* One-Sentence Positioning Line */}
         <p className="text-sm text-zinc-400 leading-relaxed max-w-xs font-sans">
-          I build scalable web applications and digital products that turn ideas into reliable experiences.
+          I build full-stack web applications and digital products—from frontend interfaces and backend systems to databases, authentication, and deployment.
         </p>
 
         {/* Availability & Location (Plain text dot, no colored dot) */}
         <div className="space-y-1.5 font-mono text-xs text-zinc-400">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-zinc-500" />
-            <span>Available for freelance work</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>Open to opportunities</span>
           </div>
           <div className="text-zinc-500">Based in Lagos, Nigeria</div>
         </div>
