@@ -29,6 +29,7 @@ export interface Testimonial {
   author: string;
   role: string;
   company: string;
+  companyShort?: string;
 }
 
 export interface TechCategory {
@@ -227,25 +228,25 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
     quote:
-      "Habeeb possesses that rare engineering maturity where he cares just as deeply about business outcomes and clean architecture as he does about shipped code. He rebuilt our payment processing queue with zero downtime and flawless reliability.",
-    author: "Tunde Bakare",
-    role: "VP of Engineering",
-    company: "DevScale Technologies",
+      `Working with Habeeb on Luketech’s website has been a really good experience. Habeeb is actually a childhood friend of mine, so one thing that stood out to me from the beginning was how professionally he handled the project despite our relationship.
+
+When I first approached him in February about building the website, instead of simply listing out what he could do over WhatsApp because of our familiarity, he scheduled a Google Meet with me. We spent about an hour discussing exactly what I wanted, and he was already showing me different samples and possibilities during the conversation. That immediately showed me that he was approaching it as a proper client project.
+
+Throughout the project, his communication remained very professional. Even when I kept changing or expanding the scope of what I wanted, he was patient, attentive and willing to make the necessary adjustments without making the process difficult. In fact, any delays that occurred were largely from my end, not his.
+
+The first phase of the website was completed successfully, and I was very happy with the result. We are already looking forward to the next phase, where we'll be adding more features and taking the website to a much higher level. Overall, what stood out most to me was his professionalism. He was able to separate friendship from business and still give me the level of attention and respect you would expect from a professional service provider.`,
+    author: "Abdulrafiu Moshood",
+    role: "Managing Director",
+    company: "Luketech Plumbing and Drilling Company LTD",
+    companyShort: "Luketech",
   },
   {
     id: "t2",
     quote:
-      "Working with Habeeb on our fintech MVP was a game changer. He took complex, ambiguous product requirements and translated them into a crisp, high-performing Next.js application in record time. I highly recommend him to any team building real products.",
-    author: "Fatima Al-Hassan",
-    role: "Founder & CEO",
-    company: "Payflow Africa",
-  },
-  {
-    id: "t3",
-    quote:
-      "Habeeb is one of the most dependable full-stack developers I've worked alongside. His attention to frontend detail combined with his deep understanding of PostgreSQL database design makes him an invaluable asset for any digital product.",
-    author: "Chidubem Okonkwo",
-    role: "Principal Product Architect",
-    company: "Apex Product Studio",
+      "Habeeb worked with us for two years as a fullstack developer, and was part of our team from the very start of the NairaGame.com project through to launch. He consistently delivered his tasks on schedule and kept clear, proactive communication with our project manager throughout — the kind of reliability that makes a project run smoothly. What stood out most was that he managed all of this while also mentoring aspiring developers coming through our company's training program, and he did both roles with the same level of care and professionalism. He's dependable, easy to work with, and someone I'd gladly work with again.",
+    author: "Martins Ejiofor",
+    role: "Founder",
+    company: "Tinzwave Technology",
+    companyShort: "Tinzwave Technology",
   },
 ];
