@@ -250,3 +250,4 @@ The first phase of the website was completed successfully, and I was very happy 
     companyShort: "Tinzwave Technology",
   },
 ];
+
